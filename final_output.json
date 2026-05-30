@@ -1,0 +1,452 @@
+[
+    {
+        "id": 1,
+        "chapter": "architectures_paradigm",
+        "question": "Why did the classic Hierarchical Paradigm (Sense-Plan-Act) ultimately fail to handle real-world robotic applications effectively, especially regarding the 'Closed World Assumption'?",
+        "answer": "It failed because it relied on the \"Closed World Assumption,\" meaning it could not handle undefined objects or unmodeled environmental changes. Furthermore, mathematically describing every action's effect (the Frame Problem) was impossible, and the serial planning cycle was too slow for real-time reactions.",
+        "ragAnswer": "The classic Hierarchical Paradigm (Sense-Plan-Act) ultimately failed to handle real-world robotic applications effectively because of the **Closed World Assumption**, which assumes the internal model is perfect and contains all relevant information. This approach cannot handle new, undefined objects or dynamic changes in the environment, making it unsuitable for real-world scenarios where the world is constantly changing and unpredictable.",
+        "score": 4,
+        "comment": "Good alignment on Closed World Assumption and handling unknowns, but missing the Frame Problem and speed issues."
+    },
+    {
+        "id": 2,
+        "chapter": "architectures_paradigm",
+        "question": "How does the concept of 'emergent behavior' in the Reactive Paradigm challenge the traditional AI notion that robots require complex internal reasoning to perform sophisticated tasks?",
+        "answer": "Emergent behavior proves that sophisticated functionalities (like dynamic role allocation) can arise simply from basic rules interacting with the environment, rather than requiring explicit coding or complex internal reasoning.",
+        "ragAnswer": "The concept of 'emergent behavior' in the Reactive Paradigm challenges the traditional AI notion by showing that sophisticated tasks can arise from simple, localized interactions and real-time responses, without the need for complex internal reasoning. Instead of relying on a global model or detailed planning, robots in the Reactive Paradigm use direct sensory input to guide actions, leading to behaviors that emerge from the system's design and environmental interactions. This contrasts with traditional AI, which emphasizes pre-programmed reasoning and planning.",
+        "score": 5,
+        "comment": "Both convey the same core idea."
+    },
+    {
+        "id": 3,
+        "chapter": "architectures_paradigm",
+        "question": "In the Subsumption Architecture, how do higher-level behaviors interact with lower-level reflex layers to achieve complex goals without a centralized global model?",
+        "answer": "Higher-level behaviors achieve complex goals by subsuming, which means inhibiting or suppressing, the lower-level reflex layers when necessary.",
+        "ragAnswer": "In the Subsumption Architecture, higher-level behaviors interact with lower-level reflex layers by subsuming (inhibiting or suppressing) them to achieve complex goals. Higher-level behaviors operate on a slower time scale and can override lower-level reflexes when necessary, allowing the robot to perform complex tasks without requiring a centralized global model.",
+        "score": 5,
+        "comment": "Correct and adds relevant detail."
+    },
+    {
+        "id": 4,
+        "chapter": "architectures_paradigm",
+        "question": "What specific limitations of both purely Deliberative systems and purely Reactive systems does the Hybrid Paradigm attempt to resolve?",
+        "answer": "It resolves the Deliberative system's slow processing and struggle with changing worlds, while also fixing the Reactive system's lack of memory, long-term planning, and global goal handling.",
+        "ragAnswer": "The Hybrid Paradigm attempts to resolve the limitations of purely Deliberative systems (being too slow and struggling with the Frame Problem) and purely Reactive systems (lacking memory, planning, and global goal handling).",
+        "score": 5,
+        "comment": "The student answer captures the same meaning and keywords, with minor phrasing differences."
+    },
+    {
+        "id": 5,
+        "chapter": "architectures_paradigm",
+        "question": "Explain the role of the Sequencing/Interface Layer in the Hybrid Paradigm and why it is critical for connecting a robot's high-level goals to its real-time actions.",
+        "answer": "This layer acts as a critical manager that bridges the upper and lower layers by selecting the appropriate reactive behaviors based on the high-level plan, and it monitors progress to report back to the planner.",
+        "ragAnswer": "The Sequencing/Interface Layer in the Hybrid Paradigm acts as a manager that selects appropriate reactive behaviors based on high-level goals and monitors progress. It is critical for connecting high-level plans to real-time actions by ensuring that the robot's behaviors align with its overall mission while maintaining responsiveness to dynamic environments.",
+        "score": 5,
+        "comment": "Nearly identical meaning; student elaborates with consistent details."
+    },
+    {
+        "id": 6,
+        "chapter": "human_robot_interaction",
+        "question": "How does the 'Human Out-Of-The-Loop' problem pose a significant risk in highly automated telesystems when unexpected failures occur?",
+        "answer": "In highly automated systems, human operators lose situational awareness, meaning if automation unexpectedly fails, they cannot seamlessly take over because they do not understand the system's current state.",
+        "ragAnswer": "The \"Human Out-Of-The-Loop\" (OOTL) problem poses a significant risk in highly automated telesystems when unexpected failures occur because the human operator loses situational awareness. If the automation fails, the human cannot seamlessly take over because they do not understand the current state of the system, leading to potential safety issues or mission failure. This was evident in the Air France accident, where pilots could not handle a stall after autopilot disengaged.",
+        "score": 5,
+        "comment": "Student answer captures the same concept and adds relevant example."
+    },
+    {
+        "id": 7,
+        "chapter": "human_robot_interaction",
+        "question": "Contrast 'Supervisory Control' with 'Shared Control' in terms of how the human operator and the robot divide the workload and feedback loops.",
+        "answer": "In Supervisory Control, the human gives high-level directives and the robot executes them autonomously using local feedback loops. In Shared Control, both provide simultaneous control signals, such as the robot handling high-frequency stability while the human handles low-frequency guidance.",
+        "ragAnswer": "**Supervisory Control** involves the human setting high-level goals, while the robot executes them autonomously using its own feedback loops. The human has minimal involvement in real-time control.\n\n**Shared Control** involves both the human and robot supplying control signals simultaneously. The robot handles high-frequency tasks (e.g., stability), while the human manages low-frequency guidance. Feedback loops are shared, allowing for real-time interaction and adjustment.",
+        "score": 5,
+        "comment": "The student answer captures the same key concepts and meaning as the teacher answer, with slightly more elaboration."
+    },
+    {
+        "id": 8,
+        "chapter": "human_robot_interaction",
+        "question": "How does the 'Horse Metaphor' (H-Metaphor) simplify the control of high-Degree-Of-Freedom robots while simultaneously improving safety through shared intelligence?",
+        "answer": "It simplifies control by having the human provide high-level guidance (the \"rider\") while the robot intuitively handles the low-level mechanical complexity and balance (the \"horse\"), refusing or modifying unsafe commands based on its own perception.",
+        "ragAnswer": "The 'Horse Metaphor' (H-Metaphor) simplifies the control of high-DOF robots by dividing tasks between the human and robot. The human provides high-level guidance, while the robot handles low-level mechanical complexity, akin to a rider and horse. This shared intelligence improves safety by allowing the robot to autonomously modify or refuse commands when necessary, ensuring safe execution without blind obedience.",
+        "score": 5,
+        "comment": "Perfect alignment in meaning and key points."
+    },
+    {
+        "id": 9,
+        "chapter": "human_robot_interaction",
+        "question": "Why is 'Shared Intelligence' particularly necessary when dealing with probabilistic commands originating from Brain-Machine Interfaces (BMIs)?",
+        "answer": "Because BMI commands are noisy and uncertain (probabilistic), the robot must filter the command by combining the user's probability distribution with actual environmental affordances to ensure safe execution.",
+        "ragAnswer": "Shared Intelligence is necessary when dealing with probabilistic commands from Brain-Machine Interfaces (BMIs) because BMI signals are uncertain and noisy. Instead of blindly executing these commands, Shared Intelligence allows the robot to combine the user's probabilistic intent with environmental information to make safer, more logical decisions. This ensures the robot can adapt and act in a way that is both safe and effective, even when the user's intentions are not certain.",
+        "score": 5,
+        "comment": "The student answer captures the same core idea: noisy/probabilistic BMI commands require combining with environmental information for safe execution, and includes all key terms."
+    },
+    {
+        "id": 10,
+        "chapter": "human_robot_interaction",
+        "question": "In the context of the INTELLEXO project, how does the exoskeleton adapt healthy human 'motor primitives' to safely navigate real-world environmental affordances like stairs?",
+        "answer": "The exoskeleton learns basic \"motor primitives\" from healthy human demonstrations and uses an RGB-D camera to adapt those primitives in real-time to safely traverse environmental affordances like stairs.",
+        "ragAnswer": "In the INTELLEXO project, the exoskeleton adapts healthy human motor primitives to navigate real-world environmental affordances like stairs by using an RGB-D camera to perceive the environment. It real-time adjusts the motor primitives to generate collision-free, physiologically natural gait trajectories, ensuring safe navigation.",
+        "score": 5,
+        "comment": "The student answer captures all key points from the teacher answer and adds relevant detail without altering the core meaning."
+    },
+    {
+        "id": 11,
+        "chapter": "intro_to_robotics",
+        "question": "Why is modularity (specifically the use of Nodes and Topics) considered the key to success in robotics software development using the ROS 2 framework?",
+        "answer": "Modularity allows developers to reuse independent processing units (Nodes) and communication channels (Topics) created by others, preventing them from having to \"reinvent the wheel\" for every specific functionality.",
+        "ragAnswer": "Modularity, specifically through the use of Nodes and Topics in ROS 2, is considered key to success in robotics software development because it allows developers to reuse existing code and focus on specific application tasks. Nodes handle individual functionalities, while Topics enable communication between different parts of the system, promoting flexibility, scalability, and collaboration across different labs and projects.",
+        "score": 5,
+        "comment": "Student answer captures the same core meaning of modularity enabling reuse of Nodes and Topics, preventing redundant work, and aligns with teacher answer's key points."
+    },
+    {
+        "id": 12,
+        "chapter": "intro_to_robotics",
+        "question": "Why did the concept of fully automated 'dark factories' largely fail, and how does Industry 5.0 address these limitations?",
+        "answer": "They failed because the real world is highly dynamic; robots struggled with unmodeled events and mechanical failures that still required human dexterity and reasoning. Industry 5.0 addresses this by emphasizing human-centric collaborative robotics.",
+        "ragAnswer": "The concept of fully automated \"dark factories\" largely failed because the real world is too complex and dynamic for current robotics technology. Robots struggle with unmodeled events and mechanical failures that require human dexterity and reasoning to fix. Industry 5.0 addresses these limitations by focusing on sustainability, resilience, and a human-centric approach, emphasizing collaboration between humans and robots rather than full automation.",
+        "score": 5,
+        "comment": "The student answer captures the same key points about failure due to dynamic world and Industry 5.0's human-centric collaboration."
+    },
+    {
+        "id": 13,
+        "chapter": "intro_to_robotics",
+        "question": "What specific design choices and sensor implementations make Collaborative Robots (Cobots) fundamentally different from traditional Industry 3.0 robots in terms of workplace safety?",
+        "answer": "Cobots are safe by design and equipped with sensors to stop upon human contact, allowing them to work without protective fences, unlike older robots that blindly followed fixed programs regardless of obstacles.",
+        "ragAnswer": "Collaborative Robots (Cobots) differ from traditional Industry 3.0 robots in workplace safety through design choices and sensor implementations such as:\n\n1. **Safety by Design**: Cobots are inherently safe, equipped with sensors to stop upon contact or detection of humans, unlike older robots that continue moving regardless of obstacles.\n\n2. **Tactile and Proximity Sensors**: Cobots use tactile sensors (e.g., capacitors in soft substrates) and proximity sensors (e.g., infrared) to detect contact or pre-collision, enabling immediate or anticipatory safety responses.\n\n3. **No Protective Fences**: Cobots operate without protective cages, allowing direct human-robot interaction in shared workspaces.\n\n4. **Advanced Interaction Features**: Some cobots use displays to indicate future actions (e.g., gaze direction), aiding humans in predicting movements and enhancing safety.",
+        "score": 5,
+        "comment": "Student answer captures all key points from teacher (safety by design, sensors stopping on contact, no fences, contrast with older robots) and adds extra details without changing meaning."
+    },
+    {
+        "id": 14,
+        "chapter": "intro_to_robotics",
+        "question": "How did the historical 'Tool' track and the 'Agent' track in robotics differ, and how do modern collaborative robots converge these two lineages?",
+        "answer": "The \"Tool\" track focused on industrial precision and teleoperation, while the \"Agent\" track focused on AI, reasoning, and autonomy. Cobots converge these by merging industrial reliability with intelligent sensing and adaptability.",
+        "ragAnswer": "The historical 'Tool' track in robotics focused on precision and teleoperation, driven by the nuclear industry's need to handle radioactive materials remotely, leading to the development of industrial robots like the Unimate. This track emphasized reliability and strength.\n\nThe 'Agent' track focused on autonomy and reasoning, driven by the space race and AI research, with milestones like Shakey, the first mobile robot capable of perceiving its environment and planning actions.\n\nModern collaborative robots converge these lineages by combining the reliability and strength of industrial \"tools\" with the sensing and adaptability of intelligent \"agents,\" enabling safe, human-centric interaction in dynamic environments.",
+        "score": 5,
+        "comment": "Both answers convey the same core concepts of the two tracks and their convergence in cobots; the student adds relevant historical details without changing the meaning."
+    },
+    {
+        "id": 15,
+        "chapter": "intro_to_robotics",
+        "question": "Based on the provided definitions, what is the fundamental difference in how autonomous systems versus simply automated systems handle unexpected environmental changes (Open vs. Closed World Assumptions)?",
+        "answer": "Automated systems operate in a Closed World with perfect models and deterministic, signal-based decisions, whereas autonomous systems operate in an Open World, using symbols and reasoning to adapt to dynamic, unmodeled events.",
+        "ragAnswer": "Autonomous systems operate under the Open World Assumption, meaning they can adapt to unexpected environmental changes and unmodeled events using feedback loops and reasoning. Automated systems operate under the Closed World Assumption, where the environment is perfectly modeled, and there are no surprises; they rely on deterministic decisions based on pre-defined signals.",
+        "score": 5,
+        "comment": "The student answer captures the same key distinctions and meaning as the teacher answer, with only a slight variation in terminology."
+    },
+    {
+        "id": 16,
+        "chapter": "kin_mobile_robots",
+        "question": "What is the primary purpose of calculating the kinematic transformation between the robot's local frame and the global world frame?",
+        "answer": "Its primary purpose is to mathematically map the robot's local perception and internal frame to the global world frame (the map).",
+        "ragAnswer": "The primary purpose of calculating the kinematic transformation between the robot's local frame and the global world frame is to map the robot's local perception to the global map, enabling accurate navigation and control within the environment.",
+        "score": 5,
+        "comment": "The student answer captures the same core purpose and includes key terms like mapping local perception to global frame, with additional context that aligns with the teacher's meaning."
+    },
+    {
+        "id": 17,
+        "chapter": "kin_mobile_robots",
+        "question": "Explain the difference between holonomic and non-holonomic constraints using a standard automobile as an example.",
+        "answer": "A holonomic robot can instantaneously control all its degrees of freedom (like moving sideways). A standard automobile is non-holonomic because its motion is constrained; it has 3 degrees of freedom in the world but cannot instantaneously slide sideways.",
+        "ragAnswer": "Holonomic constraints allow a robot to control all degrees of freedom (DOF) simultaneously, such as an omnidirectional robot moving sideways instantly. Non-holonomic constraints, like in a standard automobile, limit the robot's ability to move in certain directions instantaneously. A car has 3 DOF (translation in x, y, and rotation \u03b8) but can only control 2 DOF (throttle and steering), preventing it from moving sideways without maneuvering.",
+        "score": 5,
+        "comment": "The student answer captures the same meaning and key points, with additional precise details about DOF control, matching the teacher's explanation."
+    },
+    {
+        "id": 18,
+        "chapter": "kin_mobile_robots",
+        "question": "Why is dead reckoning prone to accumulating errors over time when used as the sole method for mobile robot navigation?",
+        "answer": "Because dead reckoning relies entirely on integrating internal sensor data (like wheel encoders) without external reference checks, small measurement errors continuously accumulate into significant drift over time.",
+        "ragAnswer": "Dead reckoning is prone to accumulating errors over time because it estimates position by integrating internal motion measurements (such as speed and heading) without external references. These internal measurements are subject to drift and noise, leading to increasing inaccuracies as time passes. For example, small errors in measuring rotation or acceleration can compound over time, causing the estimated position to deviate significantly from the actual position. This is why dead reckoning is often used in conjunction with other sensors (sensor fusion) to improve accuracy and reliability.",
+        "score": 5,
+        "comment": "The student answer accurately captures all key points: reliance on internal sensors, lack of external references, and error accumulation over time, with a clear explanation equivalent to the teacher's."
+    },
+    {
+        "id": 19,
+        "chapter": "kin_mobile_robots",
+        "question": "In a differential drive robot, how do the independent velocities of the right and left wheels determine whether the robot moves in a straight line or rotates on the spot?",
+        "answer": "If both wheels move at identical speeds ($v_L = v_R$), the robot moves straight; if they move at the same speed but in opposite directions ($v_L = -v_R$), the robot rotates in place.",
+        "ragAnswer": "In a differential drive robot, if the right and left wheels have equal velocities ($v_L = v_R$), the robot moves in a straight line. If the velocities are equal in magnitude but opposite in direction ($v_L = -v_R$), the robot rotates on the spot.",
+        "score": 5,
+        "comment": "The student answer conveys the exact same meaning and keywords as the teacher answer."
+    },
+    {
+        "id": 20,
+        "chapter": "kin_mobile_robots",
+        "question": "How does the calculation of the Instantaneous Center of Curvature (ICC) relate to the curved trajectory of a differential drive robot?",
+        "answer": "The ICC is the mathematical point around which the robot revolves during a turn, and its radius is dictated by the difference in speed between the right and left wheels.",
+        "ragAnswer": "The Instantaneous Center of Curvature (ICC) is the point around which a differential drive robot rotates during curved motion. The radius $ R $ of the turn is determined by the difference in velocities of the left and right wheels, and the ICC lies at a distance $ R $ from the robot's center, perpendicular to the direction of motion. This allows the robot to follow a curved path by adjusting the wheel speeds to create a rotational motion around the ICC.",
+        "score": 5,
+        "comment": "The student answer correctly conveys the same core meaning as the teacher answer, adding accurate details without contradiction."
+    },
+    {
+        "id": 21,
+        "chapter": "local_and_mapping",
+        "question": "Why might a roboticist choose to use Radar over Lidar for an autonomous vehicle operating in highly adverse weather conditions?",
+        "answer": "Radar uses radio waves which easily penetrate rain, fog, and dust, whereas Lidar uses light beams that get scattered or absorbed in adverse weather.",
+        "ragAnswer": "A roboticist might choose Radar over Lidar for an autonomous vehicle operating in highly adverse weather conditions because Radar is robust in rain, fog, and dust. Unlike Lidar, which struggles with these conditions due to light absorption or scattering, Radar uses radio waves that are less affected by such environmental factors. Additionally, Radar can measure velocity directly via the Doppler effect, providing valuable information for navigation and obstacle avoidance in challenging weather.",
+        "score": 5,
+        "comment": "Correctly captures the same meaning and key points, with extra relevant detail."
+    },
+    {
+        "id": 22,
+        "chapter": "local_and_mapping",
+        "question": "Compare and contrast the primary use cases and representations of Metric Maps versus Topological Maps in robot navigation.",
+        "answer": "Metric maps represent the world using precise Cartesian coordinates and distances (essential for local obstacle avoidance), while Topological maps represent the world as a graph of distinctive landmarks and connections (efficient for long-distance path planning).",
+        "ragAnswer": "**Metric Maps** are used for precise obstacle avoidance and local motion planning, representing the world with Cartesian coordinates, distances, and angles. They provide exact $(x, y, \\theta)$ positioning.\n\n**Topological Maps** are used for high-level path planning, symbolic reasoning, and long-distance travel, representing the world as a graph of \"distinctive places\" and their connectivity. They focus on relationships rather than exact distances.\n\n**Key Contrast**: Metric maps offer quantitative, precise spatial data, while topological maps offer qualitative, abstract representations focused on connectivity and symbolic reasoning.",
+        "score": 5,
+        "comment": "Perfect match with additional relevant detail."
+    },
+    {
+        "id": 23,
+        "chapter": "local_and_mapping",
+        "question": "How does the concept of Configuration Space (C-Space) simplify path planning, and what is a common drawback of using Occupancy Grids to represent this space?",
+        "answer": "C-Space simplifies planning by inflating obstacles by the robot's radius, reducing the robot to a single point. A major drawback of Occupancy Grids is \"Digitization Bias,\" where a cell is marked entirely occupied even if an object only covers a fraction of it.",
+        "ragAnswer": "The Configuration Space (C-Space) simplifies path planning by abstracting the robot's complex geometry into a single point in a high-dimensional space, allowing planners to focus on finding a collision-free path. A common drawback of using Occupancy Grids to represent this space is that they can be computationally expensive and less effective in high-dimensional spaces due to the \"curse of dimensionality.\"",
+        "score": 3,
+        "comment": "Mentions C-Space abstraction but misses inflating obstacles; gives a different drawback (curse of dimensionality) instead of digitization bias."
+    },
+    {
+        "id": 24,
+        "chapter": "local_and_mapping",
+        "question": "Explain the 'Chicken-and-Egg Paradox' inherent in the Simultaneous Localization and Mapping (SLAM) problem.",
+        "answer": "A map is necessary to accurately localize the robot, but the robot's accurate location is required to successfully build the map.",
+        "ragAnswer": "The Chicken-and-Egg Paradox in SLAM refers to the interdependence between mapping and localization: a map is needed to localize the robot, but accurate localization is required to build a reliable map. Thus, both must be estimated simultaneously.",
+        "score": 5,
+        "comment": "The student answer captures the exact same meaning as the teacher answer, using the same key concepts and adding context like \"Chicken-and-Egg Paradox\" and \"estimated simultaneously.\""
+    },
+    {
+        "id": 25,
+        "chapter": "local_and_mapping",
+        "question": "How does Graph-based SLAM utilize the concept of 'Loop Closure' to optimize the map and drastically reduce accumulated drift?",
+        "answer": "When the robot recognizes a previously visited location, it adds a \"Loop Closure\" constraint to its optimization graph, which corrects accumulated drift across the entire map.",
+        "ragAnswer": "Graph-based SLAM utilizes 'Loop Closure' by adding a constraint when a robot recognizes a previously visited location. This constraint corrects accumulated drift and reduces error in the map by connecting the current robot pose to the previously recorded one, effectively minimizing the overall error in the factor graph.",
+        "score": 5,
+        "comment": "Student answer accurately captures the core concept and adds relevant details without changing meaning."
+    },
+    {
+        "id": 26,
+        "chapter": "locomotion",
+        "question": "Why is bipedal walking considered a surprisingly efficient form of locomotion compared to sliding or crawling?",
+        "answer": "It is efficient because walking is mechanically similar to rolling; the center of mass moves in an arc that mimics a rimless wheel.",
+        "ragAnswer": "Bipedal walking is considered surprisingly efficient because it mechanically resembles rolling, with the center of mass moving in a way similar to a rimless wheel. This efficiency surpasses sliding or crawling, which require significantly more power.",
+        "score": 5,
+        "comment": "The student answer captures the exact core comparison to rolling and rimless wheel, with the same meaning; the added comparison to sliding/crawling does not detract."
+    },
+    {
+        "id": 27,
+        "chapter": "locomotion",
+        "question": "What is the key difference between static stability and dynamic stability, and how does this affect the physical design of legged robots?",
+        "answer": "Static stability keeps the center of gravity permanently within the support polygon (requiring 3+ legs), whereas dynamic stability requires the robot to constantly catch itself while falling, allowing 2-legged walking but demanding active control.",
+        "ragAnswer": "The key difference between static and dynamic stability is that static stability relies on the center of gravity staying within the polygon of support, requiring at least three legs or large feet, while dynamic stability involves the robot constantly \"falling\" and catching itself, allowing for 2-legged walking but requiring active control. This affects the physical design of legged robots by influencing the number of legs, foot size, and control mechanisms needed for stability.",
+        "score": 5,
+        "comment": "Captures all key points and extends appropriately."
+    },
+    {
+        "id": 28,
+        "chapter": "locomotion",
+        "question": "How do Swedish (Mecanum) wheels enable omnidirectional movement, and what are the trade-offs regarding control and traction?",
+        "answer": "They enable omnidirectional sideways movement via $45^{\\circ}$ angled rollers on the perimeter, but they trade off by being complex to control and having uneven traction.",
+        "ragAnswer": "Swedish (Mecanum) wheels enable omnidirectional movement through rollers set at a $45^\\circ$ angle, allowing the robot to move sideways and rotate without sliding friction. The trade-offs include complex control requirements and potential traction issues due to the rollers' orientation and the difficulty in maintaining consistent contact with the ground.",
+        "score": 5,
+        "comment": "Student answer captures all key points from teacher answer and provides additional context without contradicting meaning."
+    },
+    {
+        "id": 29,
+        "chapter": "locomotion",
+        "question": "Discuss the trade-off between maneuverability and controllability when comparing a Differential Drive configuration to an Ackermann Steering (car-like) configuration.",
+        "answer": "Differential Drive offers high maneuverability (can turn on the spot) but lower stability. Ackermann Steering offers high stability but poor maneuverability, as it is non-holonomic and cannot turn on the spot.",
+        "ragAnswer": "Differential Drive offers higher maneuverability, allowing the robot to turn on the spot and move in any direction, but it has lower controllability due to its complexity in motion planning. Ackermann Steering provides better controllability with simpler motion patterns, but it has lower maneuverability as it cannot move sideways or turn on the spot, requiring complex maneuvers to change direction.",
+        "score": 4,
+        "comment": "Mostly correct with minor terminology differences (controllability vs stability) and added detail."
+    },
+    {
+        "id": 30,
+        "chapter": "locomotion",
+        "question": "Using the 'Shrimp Robot' as an example, explain how passive mechanical adaptation can substitute for complex perception and path planning when climbing obstacles.",
+        "answer": "Its passive mechanical bogie system and spring-loaded wheels allow it to physically adapt to and climb obstacles automatically, entirely bypassing the need for complex perception or path calculation.",
+        "ragAnswer": "The \"Shrimp\" robot uses a mechanical design with a bogie system and spring-loaded wheels to passively climb obstacles up to two times its wheel radius. This passive mechanical adaptation allows it to navigate uneven terrain without the need for sensors or complex perception and path planning, as the mechanical system inherently adjusts to obstacles through its physical design.",
+        "score": 5,
+        "comment": "The student answer captures all key points and meaning, with only minor additional detail."
+    },
+    {
+        "id": 31,
+        "chapter": "motion_planning",
+        "question": "What distinguishes Motion Planning, which accounts for time and kinematics, from pure geometric Path Planning?",
+        "answer": "Pure geometric Path Planning only finds a spatial route, whereas Motion Planning computes a trajectory by strictly accounting for time, physical dynamics, and kinematic constraints.",
+        "ragAnswer": "Motion Planning accounts for time and kinematics by computing a collision-free trajectory that considers the robot's dynamics and constraints, while Path Planning is purely geometric and focuses on finding a path without considering the robot's movement capabilities or time.",
+        "score": 5,
+        "comment": "Same meaning, correctly distinguishes both concepts."
+    },
+    {
+        "id": 32,
+        "chapter": "motion_planning",
+        "question": "Compare the basic operational approaches and use cases of Probabilistic Roadmap (PRM) versus Rapidly-exploring Random Tree (RRT) algorithms.",
+        "answer": "Probabilistic Roadmaps (PRM) pre-compute a graph during a learning phase to be queried later, whereas Rapidly-exploring Random Trees (RRT) grow a tree from scratch to immediately solve a specific, single query.",
+        "ragAnswer": "**Probabilistic Roadmap (PRM):**  \n- **Approach:** Builds a roadmap graph $G$ in a static environment by sampling points in $C_{free}$ and connecting nearby points with paths.  \n- **Use Cases:** Suitable for static environments where the map is precomputed and queried multiple times.  \n\n**Rapidly-exploring Random Tree (RRT):**  \n- **Approach:** Grows a tree from the start configuration, expanding toward random samples in $C_{free}$. Uses Voronoi bias to explore unexplored space.  \n- **Use Cases:** Designed for single-query problems, especially in high-dimensional spaces where precomputation is impractical.  \n\n**Key Difference:** PRM is for multi-query scenarios with static environments, while RRT is for single-query, dynamic or high-dimensional problems.",
+        "score": 5,
+        "comment": "Student answer correctly captures the core distinction and adds relevant detail."
+    },
+    {
+        "id": 33,
+        "chapter": "motion_planning",
+        "question": "What is the primary vulnerability of using Artificial Potential Fields (APF) for robot navigation, and why does this issue occur?",
+        "answer": "Artificial Potential Fields treat the robot as a particle in a force field, making them highly vulnerable to getting permanently stuck in \"Local Minima\" where attractive and repulsive forces cancel out.",
+        "ragAnswer": "The primary vulnerability of using Artificial Potential Fields (APF) for robot navigation is the tendency to get stuck in local minima. This occurs because the robot may become trapped in a region where the net force is zero, preventing it from reaching the goal, especially in complex environments with obstacles.",
+        "score": 5,
+        "comment": "The student captures the core vulnerability (local minima due to zero net force) and context, closely matching the teacher's meaning."
+    },
+    {
+        "id": 34,
+        "chapter": "motion_planning",
+        "question": "In Human-Robot Collaboration scenarios, how and why does a robot dynamically switch roles between being a 'Leader' and a 'Follower'?",
+        "answer": "The robot dynamically switches between a \"Leader\" (providing precise guidance) and a \"Follower\" (yielding compliantly to human force) based on real-time vision, force detection, or distance to the goal.",
+        "ragAnswer": "In Human-Robot Collaboration scenarios, a robot dynamically switches roles between being a 'Leader' and a 'Follower' based on the task requirements and environmental conditions. The robot acts as a leader when it possesses superior situational awareness, computational capabilities, or expertise in executing specific tasks, allowing it to make decisions and take control. It becomes a follower when the human operator has better contextual understanding, higher-level goals, or needs to intervene for safety or adaptability. This dynamic switching ensures optimal performance, safety, and efficiency by leveraging the strengths of both the human and the robot.",
+        "score": 5,
+        "comment": "The student answer correctly captures the dynamic switching between Leader and Follower roles, aligning with the teacher's meaning, and provides additional context without contradicting the original."
+    },
+    {
+        "id": 35,
+        "chapter": "motion_planning",
+        "question": "Why is it necessary to combine offline planners (like RRT) with online planners (like APF) to ensure safety in dynamic, collaborative industrial scenarios?",
+        "answer": "Offline planners generate the nominal route, but online planners are required to dynamically modify that route in real-time to avoid moving humans and adapt to their intentions.",
+        "ragAnswer": "Combining offline planners (like RRT) with online planners (like APF) ensures safety in dynamic, collaborative industrial scenarios by leveraging the strengths of both approaches. Offline planners generate a nominal path efficiently, while online planners adapt in real-time to avoid moving obstacles and align with human intentions, ensuring safe and responsive navigation in unpredictable environments.",
+        "score": 5,
+        "comment": "The student answer captures the same meaning with additional examples and context, but the core idea is identical."
+    },
+    {
+        "id": 36,
+        "chapter": "motion_planning_paper",
+        "question": "Explain the concept of 'Probabilistic Completeness' in sampling-based planners and discuss its primary limitation compared to exact completeness.",
+        "answer": "It guarantees that if a solution exists, the probability of finding it approaches 100% as sampling time approaches infinity. However, its limitation is that it can never definitively report that *no* solution exists.",
+        "ragAnswer": "Probabilistic completeness in sampling-based planners means that as the number of samples increases, the probability of finding a valid path approaches 1.0 if one exists. Its primary limitation compared to exact completeness is that it cannot definitively determine the absence of a solution, whereas exact completeness guarantees a finite-time determination of solution existence or non-existence.",
+        "score": 5,
+        "comment": "The student answer accurately conveys the same meaning as the teacher, including the probabilistic guarantee and the inability to prove absence of a solution. The additional comparison is consistent and does not detract from correctness."
+    },
+    {
+        "id": 37,
+        "chapter": "motion_planning_paper",
+        "question": "Why do modern motion planning algorithms often rely on a collision detector as a 'black box' rather than explicitly calculating the geometry of obstacles in Configuration Space?",
+        "answer": "Because explicitly calculating the mathematical geometry of obstacles in high-dimensional Configuration Space is computationally expensive, planners simply propose a point and ask a \"black box\" detector if it results in a collision.",
+        "ragAnswer": "Modern motion planning algorithms use a collision detector as a \"black box\" because calculating the geometry of obstacles in Configuration Space explicitly is computationally expensive. The collision detector efficiently checks for collisions during the planning process, making the algorithm more practical and scalable, especially for high-dimensional problems.",
+        "score": 5,
+        "comment": "Student answer accurately captures the key idea of using a black-box collision detector due to computational cost, with matching meaning and relevant keywords."
+    },
+    {
+        "id": 38,
+        "chapter": "motion_planning_paper",
+        "question": "Describe the 'Local Minima Problem' in Artificial Potential Field approaches and how the physical geometry of an obstacle (such as a U-shape) contributes to it.",
+        "answer": "If the robot enters a basin (like a U-shaped obstacle), it rolls down the gradient descent until the repulsive forces perfectly balance the attractive goal forces, trapping the robot at a net-zero force before it reaches the goal.",
+        "ragAnswer": "The 'Local Minima Problem' in Artificial Potential Field (APF) approaches occurs when the robot gets trapped in a region where the net force is zero, preventing it from reaching the goal. This typically happens due to the physical geometry of obstacles, such as a U-shaped obstacle, which creates a \"basin\" where the repulsive forces from the obstacle and the attractive force toward the goal balance out. The robot cannot escape this basin without additional guidance, as the potential field does not provide a clear path out.",
+        "score": 5,
+        "comment": "Student correctly identifies the local minima problem, mentions U-shaped obstacle, basin, and net zero force, matching the teacher answer's meaning and key points."
+    },
+    {
+        "id": 39,
+        "chapter": "motion_planning_paper",
+        "question": "How do nonholonomic and kinodynamic constraints complicate motion planning compared to planning a purely geometric path?",
+        "answer": "These require the planner to search within a Phase Space that combines both geometric position and velocity, ensuring the path obeys steering limits (nonholonomic) and acceleration/force limits (kinodynamic).",
+        "ragAnswer": "Nonholonomic constraints limit the robot's velocity in ways that cannot be directly integrated into position constraints, such as a car's inability to slide sideways. This requires considering velocity and acceleration in motion planning, making it more complex than purely geometric path planning. Kinodynamic constraints further complicate things by involving both kinematic (velocity) and dynamic (force/acceleration) limitations, necessitating planning in phase space ($q, \\dot{q}$) rather than just configuration space. These constraints demand more sophisticated planners that account for dynamics and real-time adjustments.",
+        "score": 5,
+        "comment": "Captures all key concepts and expands correctly."
+    },
+    {
+        "id": 40,
+        "chapter": "motion_planning_paper",
+        "question": "What is the main trade-off between Centralized and Decoupled approaches when attempting to plan collision-free motions for multiple robots simultaneously?",
+        "answer": "Centralized planning is complete but computationally heavy because it treats all robots as one massive system; Decoupled planning is faster by planning individually and coordinating timing, but it sacrifices exact completeness.",
+        "ragAnswer": "The main trade-off between Centralized and Decoupled approaches is between completeness and computational efficiency. The Centralized approach is complete but computationally expensive, while the Decoupled approach is faster but sacrifices completeness.",
+        "score": 5,
+        "comment": "Student answer captures the exact trade-off and key terms (completeness, computational efficiency, speed) as the teacher answer."
+    },
+    {
+        "id": 41,
+        "chapter": "robot_perception",
+        "question": "Explain the 'Paradox of Intelligence' in robotics: why are abstract cognitive tasks like playing chess considered computationally easier than unconscious human tasks like seeing and walking?",
+        "answer": "Abstract cognitive tasks operate in a predictable \"closed world,\" making them computationally easy, while unconscious tasks like perception operate in a messy, unpredictable \"open world,\" making them incredibly difficult for a robot to process.",
+        "ragAnswer": "The \"Paradox of Intelligence\" in robotics refers to the observation that abstract cognitive tasks, such as playing chess, are computationally easier than unconscious human tasks like seeing and walking. This is because chess involves a closed world with complete information and predictable rules, making it easier for algorithms to process and solve. In contrast, tasks like perception and locomotion occur in an open world with dynamic, unpredictable elements, incomplete information, and complex interactions, making them extremely challenging for robots to replicate.",
+        "score": 5,
+        "comment": "Concise and accurate, captures the essence of the paradox with examples."
+    },
+    {
+        "id": 42,
+        "chapter": "robot_perception",
+        "question": "Outline the hierarchical steps in the robot perception pipeline required to convert raw sensor data into high-level semantics and context.",
+        "answer": "It extracts Features from raw numerical data, combines features to identify Objects, and finally reasons about object relationships to extract high-level Semantics and Context.",
+        "ragAnswer": "The hierarchical steps in the robot perception pipeline are as follows:\n\n1. **Raw Data**: Collecting sensor inputs (e.g., pixel arrays, range readings).\n2. **Features**: Extracting patterns from raw data (e.g., lines, corners, colors).\n3. **Objects**: Identifying entities from features (e.g., recognizing a door or a human).\n4. **Semantics and Context**: Reasoning about object relationships and understanding the situation (e.g., a door connects two rooms).\n5. **Sensor Fusion**: Combining data from multiple sensors to create a comprehensive world model.",
+        "score": 5,
+        "comment": "The student answer correctly captures the same hierarchical steps (Features, Objects, Semantics/Context) as the teacher, with additional detail and an extra step that does not contradict the meaning."
+    },
+    {
+        "id": 43,
+        "chapter": "robot_perception",
+        "question": "In the context of characterizing sensor performance, explain the 'Target Analogy' used to differentiate between a sensor's accuracy and its repeatability (precision).",
+        "answer": "Accuracy is how close the hits are to the true center of the target, while repeatability (precision) is how tightly grouped the shots are to each other, regardless of where they land on the target.",
+        "ragAnswer": "The Target Analogy illustrates that high accuracy means hitting the center of the target (close to the true value), while high repeatability means all shots land close together (consistent results), even if they are not centered.",
+        "score": 5,
+        "comment": "The student correctly captures the definitions of accuracy and repeatability, matching the teacher's explanation in meaning and key concepts."
+    },
+    {
+        "id": 44,
+        "chapter": "robot_perception",
+        "question": "How does the use of capacitive Robot Skin improve safety and reaction times in collaborative robots compared to relying solely on internal motor torque measurements to detect collisions?",
+        "answer": "Capacitive skin detects touch or proximity immediately via deformation, reacting much faster and safer than older methods that had to wait for a forceful impact to register a spike in motor torque.",
+        "ragAnswer": "The use of capacitive Robot Skin improves safety and reaction times in collaborative robots by allowing immediate detection of contact or even pre-collision, enabling faster and safer operation. Unlike internal motor torque measurements, which require a forceful impact to detect a collision, capacitive sensors provide real-time tactile feedback, allowing cobots to respond more quickly and precisely to human interaction.",
+        "score": 5,
+        "comment": "The student answer captures the same key points: immediate detection via capacitive skin, faster and safer than torque-based methods, with clear alignment in meaning."
+    },
+    {
+        "id": 45,
+        "chapter": "robot_perception",
+        "question": "Compare the physical principles used by Time of Flight (ToF) sensors versus Triangulation sensors when measuring the distance to an object.",
+        "answer": "Time of Flight precisely measures the nanosecond it takes for a signal to bounce back. Triangulation projects a beam and geometrically calculates distance based on where the reflected dot lands on a camera's image plane.",
+        "ragAnswer": "Time of Flight (ToF) sensors measure distance by calculating the time it takes for a signal (light or sound) to travel to an object and return, using the formula $d = \\frac{c \\cdot t}{2}$. Triangulation sensors, such as structured light or stereo vision systems, determine distance by analyzing the geometric relationship between the position of a projected pattern (or two cameras) and its deformation on the object's surface.",
+        "score": 5,
+        "comment": "student accurately captures both ToF and triangulation concepts with appropriate elaboration, matching teacher's meaning."
+    },
+    {
+        "id": 46,
+        "chapter": "sensor_paper",
+        "question": "What is the defining difference between active and passive sensors in terms of how they source excitation signals?",
+        "answer": "Active sensors require an external power supply to emit their own excitation signal into the environment, whereas passive sensors only receive the energy already present.",
+        "ragAnswer": "The defining difference between active and passive sensors is that active sensors emit their own excitation signal, while passive sensors receive energy already present in the environment.",
+        "score": 5,
+        "comment": "The student answer correctly captures the essential distinction: active sensors emit their own signal, while passive sensors receive existing energy, matching the teacher's meaning closely."
+    },
+    {
+        "id": 47,
+        "chapter": "sensor_paper",
+        "question": "How do absolute encoders provide a distinct operational advantage over incremental encoders, particularly in the event of a sudden power loss?",
+        "answer": "Unlike incremental encoders that just count relative ticks, absolute encoders provide a unique binary code for every angle, allowing them to perfectly retain their position even if a power loss occurs.",
+        "ragAnswer": "Absolute encoders retain position information even after a power loss, while incremental encoders lose their position data and require a reference point to determine the new position.",
+        "score": 5,
+        "comment": "Both answers convey the same key point: absolute encoders retain position after power loss while incremental encoders do not."
+    },
+    {
+        "id": 48,
+        "chapter": "sensor_paper",
+        "question": "Why is Ultra-Wideband (UWB) technology often preferred over GPS for providing global localization to robots operating indoors?",
+        "answer": "GPS signals are absorbed by buildings and suffer from multipath errors indoors. UWB is preferred because it uses short energy pulses between fixed indoor anchors and mobile tags to provide highly accurate indoor localization.",
+        "ragAnswer": "Ultra-Wideband (UWB) technology is preferred over GPS for indoor localization because it uses short energy pulses and is more accurate than GPS, which fails indoors due to signal blockage and multipath errors. UWB also provides better precision and reliability in indoor environments with infrastructure support.",
+        "score": 5,
+        "comment": "The student answer captures all key points: GPS failure due to signal blockage and multipath, UWB using short pulses for accuracy, and mentions indoor anchors indirectly via infrastructure support."
+    },
+    {
+        "id": 49,
+        "chapter": "sensor_paper",
+        "question": "Based on their measurement principles, why might Radar be chosen over LiDAR for velocity tracking in environments heavily obscured by dust or fog?",
+        "answer": "Radar relies on radio waves which are unaffected by visual obscurants, making it superior for velocity tracking in dust or fog compared to LiDAR's light pulses, which get easily scattered.",
+        "ragAnswer": "Radar uses radio waves, which are less affected by dust and fog compared to LiDAR's light-based measurements. Additionally, Radar can measure velocity directly via the Doppler effect, making it more suitable for velocity tracking in obscured environments.",
+        "score": 5,
+        "comment": "Student answer captures the key points and adds accurate detail about Doppler effect, thoroughly matching the teacher's meaning."
+    },
+    {
+        "id": 50,
+        "chapter": "sensor_paper",
+        "question": "What is the primary limitation of passive stereo vision when trying to determine depth, and how does active stereo vision overcome this specific problem?",
+        "answer": "Passive stereo vision fails on smooth, untextured surfaces because it cannot find corresponding visual points between the two cameras. Active stereo overcomes this by explicitly projecting an artificial texture pattern onto the wall to enable matching.",
+        "ragAnswer": "The primary limitation of passive stereo vision is its failure on untextured surfaces due to the lack of features for matching corresponding points. Active stereo vision overcomes this by projecting a pattern (texture) onto the scene, allowing matching even on smooth or untextured surfaces.",
+        "score": 5,
+        "comment": "The student answer captures the same key concepts and meaning as the teacher answer."
+    }
+]
